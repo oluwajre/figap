@@ -6,10 +6,10 @@ const PageTitle = ({title}) => {
 
     useEffect(() => {
       if (title === '') {
-        document.title = 'TriniTwin';
+        document.title = 'Figap';
       }
       else {
-        document.title = `TriniTwin - ${title}`;
+        document.title = `Figap - ${title}`;
       };
       
     }, [location.pathname, title]);
