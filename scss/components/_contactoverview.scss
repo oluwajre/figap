@@ -1,0 +1,38 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.contact-overview {
+
+    .contact {
+        a:not(.map-btn) {
+            @include defaultLinkStyle;
+            text-decoration: underline;
+            @include transitionProperty;
+    
+            &:hover {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+
+}
+
+.map-marker {
+    position: relative;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.5em;
+    min-width: 60px;
+    cursor: pointer;
+    @include fontFamilyPrimary;
+
+    .icon {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $primary;
+        font-size: 2.25em;
+    }
+}

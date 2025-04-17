@@ -1,0 +1,31 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.getin-touch {
+    background-image: url('/getintouchbackground.jpg');
+}
+
+.getin-touch-form {
+    max-width: 800px;
+    background-color: $white;
+
+    a {
+        @include defaultLinkStyle;
+        @include fontFamilyPrimary;
+        font-weight: 700;
+        color: $primary;
+        @include transitionProperty;
+
+        &:hover {
+            color: #0c50b4;
+        }
+    }
+
+    input, textarea {
+        
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+}

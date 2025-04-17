@@ -1,0 +1,58 @@
+@use '../general' as *;
+
+@mixin transitionProperty {
+    transition: all 0.3s ease-out;
+}
+
+@mixin linkLineProperty {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px; /* Adjust border thickness */
+    width: 0;
+    background-color: $primary; /* Adjust underline color */
+    bottom: -1px;
+}
+
+@mixin defaultLinkStyle {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+@mixin fontFamilyPrimary {
+    font-family: "Roboto", sans-serif;
+}
+
+@mixin fontFamilySecondary {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+@mixin btnSpacing {
+    padding: .3rem .3rem .3rem 1.3rem;
+}
+
+@mixin exploreMoreIcon {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    transition: all 1s ease-out;
+}
+
+@mixin circularIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+@mixin positionAbsoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

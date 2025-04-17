@@ -1,0 +1,129 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.btn-padding {
+  @include btnSpacing;
+}
+
+.btn-background-black {
+    position: relative;
+    overflow: hidden;
+
+    // span {
+    //     position: relative;
+    //     z-index: 1;
+    // }
+
+    &::before {
+        content: 'Discover';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        background-color: $gray-900;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transitionProperty;
+    }
+
+    &:hover::before {
+        right: 0;
+    }
+}
+
+.map-btn {
+    @include defaultLinkStyle;
+    color: $primary;
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: $white;
+    @include transitionProperty;
+
+    &:hover {
+        color: $white;
+        background-color: $gray-900;
+    }
+}
+
+.button-primary,
+.button-primary-learn-more
+{
+    font-size: 1rem;
+    color: $white;
+    background-color: $primary;
+    position: relative;
+    overflow: hidden;
+    @include transitionProperty;
+
+    .icon {
+        color: $white;
+        background-color: $black;
+        border-radius: 50%;
+        padding: .65rem .8rem;
+        font-size: 1.1rem;
+        font-weight: 800;
+        transform: rotate(40deg);
+    }
+
+    &::before {
+        // content: 'Get In Touch';
+        position: absolute;
+        padding-right: 3rem;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        background-color: $black;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transitionProperty;
+    }
+
+    &:hover{
+        &::before {
+            right: 0;
+        }
+
+        .icon {
+            color: $black;
+            background-color: $primary;
+        }
+    }
+}
+
+.button-primary {
+    &::before {
+        content: 'Get In Touch';
+    }
+}
+
+.button-primary-learn-more {
+    &::before {
+        content: 'Learn More';
+    }
+}
+
+// .button-primary-explore-more {
+//     &::before {
+//         content: 'Explore More';
+//     }
+// }
+
+.naked-button-sm {
+
+    .icon {
+        color: $black;
+        background-color: $primary;
+        border-radius: 50%;
+        padding: .45rem .6rem;
+        font-size: .9rem;
+        font-weight: 800;
+        transform: rotate(40deg);
+        transition: all .5s ease-out;
+    }
+}

@@ -1,0 +1,39 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.partners {
+    .logos {
+      display: flex;
+      gap: 16px;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+  
+      .logos-slide {
+        display: flex;
+        flex-shrink: 0;
+        min-width: fit-content;
+        height: auto;
+  
+        .brand-image {
+          height: 60px;
+          flex-shrink: 0;
+          padding: .1em 0;
+          @include transitionProperty;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+  
+      &:hover {
+        .logos-slide {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+   
+  }
+  

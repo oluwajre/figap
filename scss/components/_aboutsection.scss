@@ -1,0 +1,29 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.about {
+    position: relative;
+    
+    .about-text-container {
+
+        .explore-more {
+            @include defaultLinkStyle;
+            @include transitionProperty;
+            color: $primary;
+        
+            span {
+                @include exploreMoreIcon;
+                background-color: $primary;
+            }
+        
+            &:hover {
+                color: $gray-900;
+        
+                span {
+                    width: 20px;
+                    background-color: $gray-900;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.navbar-container {
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // background-color: $black;
+    @include fontFamilyPrimary;
+
+    li {
+        display: inline-flex;
+        color: inherit;
+
+        a {
+            font-size: .9rem;
+            color: inherit;
+            position: relative;
+
+            &::after {
+                @include linkLineProperty;
+                @include transitionProperty;
+            }
+
+
+            &:hover {
+                color: inherit;
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .active {
+            color: $white;
+
+            &::after {
+                content: '';
+                position: absolute;
+                // bottom: 0;
+                left: 0;
+                height: 2px; /* Adjust border thickness */
+                width: 100%;
+                background-color: $primary; /* Adjust underline color */
+                bottom: -4px;
+                // @include transitionProperty;
+            }
+        }
+    }
+
+    .dropdown {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: $black;
+
+        .icon {
+            font-size: .9em;
+            color: $primary;
+            font-weight: 1000;
+            transform: rotate(0deg);
+            @include transitionProperty;
+        }
+
+        ul {
+            border: none;
+            border-radius: 0;
+            // box-shadow: 0px 2px 1px $gray-400;
+            background-color: $gray-900;
+
+
+            @include media-breakpoint-down(md) {
+                box-shadow: none;
+                text-align: center;
+                background-color: inherit;
+            }
+            
+            li {
+                display: inline-flex;
+                color: inherit;
+
+                @include media-breakpoint-down(md) {
+                    display: inline-flex;
+                    text-align: center;
+                }
+            }
+        }
+
+        &:hover {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    p {
+        a {
+            @include defaultLinkStyle;
+        }
+    }
+
+    .navbar-collapse {
+        overflow-y: visible;
+    }
+}

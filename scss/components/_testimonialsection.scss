@@ -1,0 +1,53 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.testimonials {
+    margin-top: 7rem;
+
+    .slick-dot-border {
+        @include circularIndicator;
+    
+        &:has(.slick-dot.active) {
+            border: 2px solid $primary;
+        }
+
+        .slick-dot {
+            border-radius: 50%;
+            background-color: $gray-500;
+        }
+
+        .slick-dot.active {
+            background-color: $primary;
+        }
+        
+    }
+
+    .heading-section {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+
+    .testimonial-inner {
+
+        .quote-line {
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+        }
+    }
+}
+
+.colored-icon-box {
+    display: flex;
+    align-items: flex-end;
+    padding: 1.8em .7em .4em 1.7em;
+    background-color: $primary;
+
+    .icon {
+        font-size: 2em;
+        color: $white;
+    }
+}

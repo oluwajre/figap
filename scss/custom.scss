@@ -1,0 +1,20 @@
+// BOOTSTRAP OVERIDES FIRST 
+@use './general';
+
+@use './components/navbar';
+@use './components/herosection';
+@use './components/servicessection';
+@use './components/aboutsection';
+@use './components/testimonialsection';
+@use './components/partnersection';
+@use './components/getintouch';
+@use './components/footersection';
+@use './components//herobanner';
+@use './components/teamsection';
+@use './components/contactoverview';
+
+
+@use './section/mixins';
+@use './section/typography';
+@use './section/button';
+@use './section/animations';

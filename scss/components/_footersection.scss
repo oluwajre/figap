@@ -1,0 +1,38 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.footer {
+    @include fontFamilyPrimary;
+
+    a {
+        @include defaultLinkStyle;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .footer-link-group {
+        list-style-type: none;
+        padding-left: 0;
+        
+        li {
+            line-height: 1.8;
+        }
+    }
+
+    .socials {
+
+        .icon {
+            font-size: 1.3em;
+        }
+    }
+
+    .footer-second-container {
+        font-size: .95em;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}

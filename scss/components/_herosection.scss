@@ -1,0 +1,221 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.hero {
+
+    .contact-box {
+        // position: absolute;
+        width: 100%;
+        background: $orange;
+        color: $black;
+        // top: 0;
+        // left: 0;
+
+        a:not(.contact-box__socials a) {
+            @include defaultLinkStyle;
+            // color: $black;
+
+            &::after {
+                // @include linkLineProperty;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px; /* Adjust border thickness */
+                width: 0;
+                background-color: $purple; /* Adjust underline color */
+                bottom: -1px;
+                // bottom: -12px;
+                @include transitionProperty;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        &__socials {
+
+            a {
+                color: $black;
+                @include transitionProperty;
+
+                &:hover {
+                    color: $white;
+                }
+
+                .icon {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .slick-dot-border {
+        @include circularIndicator;
+    
+        &:has(.slick-dot.active) {
+            border: 2px solid $white;
+        }
+
+        .slick-dot {
+            border-radius: 50%;
+        }
+        
+    }
+
+    .banner-item {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    
+        @include media-breakpoint-down(md) {
+            max-height: 540px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            max-height: 520px;
+        }
+    
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            filter: brightness(60%);
+        }
+
+        .image-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($primary, 0.1);
+            top: 0;
+            // transform: translateX(-50%, -50%);
+        }
+    
+        .banner-caption {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            top: 30%;
+    
+            .liner {
+                display: inline-block;
+                width: 80px;
+                height: 3px;
+                background-color: $primary;
+            }
+        }
+
+        #banner-caption-left {
+            @include media-breakpoint-down(sm) {
+                top: 20%;
+            }
+        }
+    
+    }
+
+}
+
+.indicator-divider {
+    width: 120px;
+    height: 1px;
+    background-color: $white;
+    align-self: center;
+}
+
+
+.video-container {
+    background-image: url("/src/assets/images/hero/banner1.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $white;
+    width: 80%;
+    max-width: 300px;
+    height: 160px;
+
+    @include media-breakpoint-down(md) {
+        height: 130px;
+    }
+
+}
+
+.video-icon {
+    @include positionAbsoluteCenter;  //Will need to create an inline style for the about video section because this has been modified for hero section homepage
+    border-radius: 50%;
+    background-color: $gray-900;
+    border: 1.2rem solid $gray-900;
+    font-size: 1rem;
+    color: $white;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    @include transitionProperty;
+
+    &:hover {
+        background-color: $white;
+        border: 1.6rem solid $white;
+        color: $primary;
+    }
+}
+
+.inline-video-icon {
+    border-radius: 50%;
+    background-color: $primary;
+    border: 2px solid $primary;
+    padding: .35em;
+    font-size: .9em;
+    color: $black;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    @include transitionProperty;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.videoOverlay {
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    .video {
+        max-width: 560px;
+    }
+
+    button {
+
+        .icon {
+            font-size: 1.5rem;
+        }
+    }
+    
+}
+
+.video-text {
+    position: absolute;
+    left: 50%;
+    top: 59%;
+    transform: translate(-50%, -50%);
+
+    @include media-breakpoint-down(lg) {
+        top: 64%;
+    }
+
+    @include media-breakpoint-down(md) {
+        top: 68%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        top: 72%;
+    }
+}
+
+
+

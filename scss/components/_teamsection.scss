@@ -1,0 +1,99 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.team {
+
+    .ceo-section {
+        height: 500px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .5s ease-out;
+        }
+
+        .image-overlay {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            display: none;
+            transition: all .5s ease-out;
+
+            ul {
+                list-style-type: none;
+                padding: 1rem 1rem;
+
+                .icon {
+                    color: $white;
+                    font-size: 1.1em;
+                    padding: .3em 0;
+                }
+            }
+        }
+    
+        .text-overlay-container {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: all .5s ease-out;
+    
+            .text-overlay {
+                background-color: $primary;
+        
+                h4 {
+                    font-size: 1.3em;
+                    @include fontFamilyPrimary;
+                    color: $white;
+                }
+
+                p {
+                    color: $gray-300;
+                }
+
+                .icon {
+                    font-size: 1.5em;
+                    color: $gray-300;
+                }
+        
+            }
+        }
+
+        &:hover {
+            .image-overlay {
+                opacity: 1;
+                display: inline-block
+            }
+        }
+    }
+
+    .explore-more {
+        @include defaultLinkStyle;
+        @include transitionProperty;
+        color: $primary;
+    
+        span {
+            @include exploreMoreIcon;
+            background-color: $primary;
+        }
+    
+        &:hover {
+            color: $gray-900;
+    
+            span {
+                width: 20px;
+                background-color: $gray-900;
+            }
+        }
+    }
+
+}
+
+
+.writer-icon {
+
+    .icon {
+        font-size: 2.2em;
+        color: $primary;
+    }
+}

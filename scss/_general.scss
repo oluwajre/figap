@@ -1,0 +1,51 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$white:#fff;
+$gray-100:#f8f9fa;
+$gray-200:#e9ecef;
+$gray-300:#dee2e6;
+$gray-400:#ced4da;
+$gray-500:#adb5bd;
+$gray-600:#6c757d;
+$gray-700:#495057;
+$gray-800:#343a40;
+$gray-900:#212529;
+$black:#000;
+
+$blue:#0d6efd;
+$orange:  #fd7e14;
+$purple:  #6f42c1;
+$red:#dc3545;
+$primary: $orange;
+
+
+
+$btn-border-radius: 50px;
+$btn-border-radius-sm: 50px;
+$btn-border-radius-lg: 50px;
+
+
+$navbar-light-toggler-border-color: transparent;
+$navbar-dark-toggler-border-color:  transparent;
+$navbar-light-active-color: $primary;
+$navbar-light-icon-color: $white;
+
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-opacity: 1;
+
+$input-border-radius: 0;
+
+$breadcrumb-divider-color: $white;
+$breadcrumb-divider: quote(">");
+
+$gradient: linear-gradient(180deg, rgba($black, 1), rgba($black, 0));
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here

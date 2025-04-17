@@ -1,0 +1,76 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.display-1 {
+    @include fontFamilySecondary;
+
+    &.banner-title {
+        font-size: 4.5em;
+        font-weight: 600;
+
+        @include media-breakpoint-up(md) {
+            font-size: 5em;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 6.5em;
+        }
+    }
+
+    &.banner-sub-title {
+        font-size: 2em;
+        font-weight: 600;
+
+        @include media-breakpoint-up(md) {
+            font-size: 3em;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 4em;
+        }
+    }
+}
+
+h1, h5 {
+    @include fontFamilySecondary
+}
+
+p {
+    @include fontFamilyPrimary;
+}
+
+.section-title-p {
+    @include fontFamilySecondary;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.component-title {
+    font-size: 3em;
+    font-weight: 600;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 3.5em;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 6em;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 8em;
+    }
+}
+
+.component-sub-title {
+    font-size: 1.5em;
+    font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+        font-size: 2em;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 2em;
+    }
+}

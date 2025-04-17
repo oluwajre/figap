@@ -1,0 +1,47 @@
+@use '../general' as *;
+@use '../section/mixins' as *;
+
+.hero-banner {
+    min-height: 350px;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+        min-height: 400px;
+    }
+
+    .hero-banner-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .image-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($primary, 0.25);
+    }
+
+    .breadcrumb {
+
+        li {
+            color: $white;
+            font-weight: 600;
+
+            &:first-child {
+                border-top: 4px solid $primary;
+            }
+
+            &:nth-child(2) {
+                border-top: 4px solid $gray-500;
+            }
+        }
+
+        
+         
+        a {
+            @include defaultLinkStyle;
+        }
+    }
+}
