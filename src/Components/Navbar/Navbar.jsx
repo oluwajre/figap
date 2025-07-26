@@ -14,7 +14,7 @@ const Navbar = ({ page }) => {
 
   return (
     <section className="navbar-container sticky-top" id="navbar">
-        <nav className={`navbar navbar-expand-md ${isMobile && !collapse ? 'bg-white text-black' : 'bg-transparent text-white bg-gradient'} py-3`}>
+        <nav className={`navbar navbar-expand-md ${isMobile && !collapse ? 'bg-white text-black' : 'bg-transparent text-white bg-gradient'} py-2`}>
             <div className="container-fluid">
                 {collapse ? (
                     <Link className={`navbar-brand text-white`} style={{fontSize: '1.7rem', fontWeight: 'bold'}} to='/'>
@@ -25,7 +25,7 @@ const Navbar = ({ page }) => {
                     <div></div>
                 )}
                 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapse(!collapse)}}>
+                <button className="navbar-toggler border border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapse(!collapse)}}>
                     {collapse? (
                         <span className="navbar-toggler-icon"></span>
                     ):(

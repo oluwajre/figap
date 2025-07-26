@@ -11940,26 +11940,16 @@ textarea.form-control-lg {
 .hero .contact-box {
   width: 100%;
   background: #fd7e14;
-  color: #000;
 }
 .hero .contact-box a:not(.contact-box__socials a) {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
-.hero .contact-box a:not(.contact-box__socials a)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px; /* Adjust border thickness */
-  width: 0;
-  background-color: #6f42c1; /* Adjust underline color */
-  bottom: -1px;
+  color: #000;
   transition: all 0.3s ease-out;
 }
-.hero .contact-box a:not(.contact-box__socials a):hover::after {
-  width: 100%;
+.hero .contact-box a:not(.contact-box__socials a):hover {
+  color: #fff;
 }
 .hero .contact-box__socials a {
   color: #000;
@@ -11969,6 +11959,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 .hero .contact-box__socials a .icon {
+  font-size: 1.1em;
   color: inherit;
 }
 .hero .slick-dot-border {

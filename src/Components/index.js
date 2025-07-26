@@ -1,3 +1,4 @@
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import Navbar from "./Navbar/Navbar";
 import HeroSection from "./HeroSection/HeroSection";
 import ServicesSection from "./ServicesSection/ServicesSection";
@@ -23,6 +24,7 @@ import ServiceHighlight from "./ServiceHighlight/ServiceHighlight";
 import ServiceToggler from "./ServiceToggler/ServiceToggler";
 
 export { 
+    ScrollToTop,
     Navbar, 
     HeroSection, 
     ServicesSection, 

@@ -8,7 +8,7 @@ import { counter_homes } from '../../assets/images';
 const ServiceColumn = ({ data }) => {
   return (
     <div className="col-12 col-md-6 col-lg-4 appear">
-        <div className='services-columns position-relative rounded overflow-hidden'>
+        <div className='services-columns border border-2 border-primary position-relative rounded overflow-hidden'>
             <img src={data.imageSource} alt="" className='z-n1 position-absolute top-0 start-0' />
             <div className="image-overlay position-absolute top-0 start-0" />
             <div className='z-1 position-relative px-4 py-5 text-black d-flex flex-column justify-content-between align-items-start' style={{minHeight: '100%'}}>

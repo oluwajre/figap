@@ -4,8 +4,8 @@ import './HeroSection.css';
 import { banner_1, banner_2, banner_3 } from '../../assets/images';
 import { contactdata } from '../../Constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faPlay, faArrowUpLong} from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faPlay, faArrowUpLong } from '@fortawesome/free-solid-svg-icons';
 import VideoOverlay from '../VideoOverlay/VideoOverlay';
 import Navbar from '../Navbar/Navbar';
 
@@ -36,14 +36,36 @@ const HeroSection = () => {
 
   return (
     <section className="hero" id="hero">
-        <div className="contact-box d-flex align-items-center justify-content-between py-3 px-3 z-2 text-black">
-            <div className='d-none d-xl-inline-flex'>{contactdata.address}</div>
-            <div className='position-relative'><a href={`tel:${contactdata.phone_1}`}>{contactdata.phone_1}</a></div>
-            <div className='position-relative d-none d-sm-inline-flex'><a href={`mailto:${contactdata.email}`}>{contactdata.email}</a></div>
+        <div className="contact-box d-flex align-items-center justify-content-between py-1 px-4 z-2">
+            <div className='d-none d-xl-inline-flex gap-1 align-items-center text-black'>
+                <span className='text-inherit'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill='currentColor' style={{width: '1.1em'}}>
+                        <path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/>
+                    </svg>
+                </span>
+                <span>{contactdata.address}</span>  
+            </div>
+            <div className='d-inline-flex gap-1 align-items-center'>
+                <span className='text-black'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill='currentColor' style={{width: '1.1em'}}>
+                        <path d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"/>
+                    </svg>
+                </span>
+                <span><a href={`tel:${contactdata.phone_1}`}>{contactdata.phone_1}</a></span>
+            </div>
+            <div className='d-none d-sm-inline-flex align-items-center gap-1'>
+                <span className='text-black'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill='currentColor' style={{width: '1.1em'}}>
+                        <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
+                    </svg>
+                </span>
+                <a href={`mailto:${contactdata.email}`}>{contactdata.email}</a>
+            </div>
             <div className="contact-box__socials">
                 <span className='fw-semibold me-3'>We are Social:</span>
-                <a href={contactdata.facebook} className='me-4'><FontAwesomeIcon icon={faFacebookF} className='icon'/></a>
-                <a href={contactdata.instagram}><FontAwesomeIcon icon={faInstagram} className='icon'/></a>
+                <a href={contactdata.facebook} className='me-3'><FontAwesomeIcon icon={faFacebookF} className='icon' title='Facebook'/></a>
+                <a href={contactdata.instagram}><FontAwesomeIcon icon={faInstagram} className='icon me-3' title='Instagram'/></a>
+                <a href={contactdata.tiktok}><FontAwesomeIcon icon={faTiktok} className='icon' title='Tiktok'/></a>
             </div>
         </div>
         <div id="carouselExampleCaptions" className="carousel slide carousel-fade position-relative" data-bs-ride="carousel">

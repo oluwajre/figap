@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const PageLoader = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ const PageLoader = ({ children }) => {
       ) : (
         children
       )}
+      {isLoading || (<ScrollToTop />)}
     </>
   );
 };
