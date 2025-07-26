@@ -36,7 +36,7 @@ const HeroSection = () => {
 
   return (
     <section className="hero" id="hero">
-        <div className="contact-box d-flex align-items-center justify-content-between py-1 px-4 z-2">
+        <div className="contact-box d-flex align-items-center justify-content-between py-1 px-sm-3 px-4 z-2">
             <div className='d-none d-xl-inline-flex gap-1 align-items-center text-black'>
                 <span className='text-inherit'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill='currentColor' style={{width: '1.1em'}}>
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 <a href={`mailto:${contactdata.email}`}>{contactdata.email}</a>
             </div>
             <div className="contact-box__socials">
-                <span className='fw-semibold me-3'>We are Social:</span>
+                <span className='fw-semibold me-2'>We are Social:</span>
                 <a href={contactdata.facebook} className='me-3'><FontAwesomeIcon icon={faFacebookF} className='icon' title='Facebook'/></a>
                 <a href={contactdata.instagram}><FontAwesomeIcon icon={faInstagram} className='icon me-3' title='Instagram'/></a>
                 <a href={contactdata.tiktok}><FontAwesomeIcon icon={faTiktok} className='icon' title='Tiktok'/></a>
