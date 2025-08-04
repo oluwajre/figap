@@ -22,7 +22,7 @@ function App() {
              } 
           />
 
-          {/* <Route 
+          <Route 
             path='/about'
             element={
               <>
@@ -31,7 +31,7 @@ function App() {
                 <ScrollAnimation />
               </> 
              } 
-          /> */}
+          />
 
           {/* <Route 
             path='/contact'

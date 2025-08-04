@@ -4,7 +4,7 @@ import { contactdata } from '../../Constants';
 import { logo } from '../../assets/images';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faCopyright, faArrowUpLong } from '@fortawesome/free-solid-svg-icons';
+import { faCopyright, faArrowUpLong, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const FooterSection = () => {
@@ -31,19 +31,27 @@ const FooterSection = () => {
                 <div className="col-12 col-lg-3 mb-3 mb-lg-0">
                     <h5 className="text-light m-0 mb-2 mb-lg-4 mt-2 fw-bold">Useful Links</h5>
                     <ul className="footer-link-group">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/about'>About</Link></li>
-                        <li><Link to='/services'>Services</Link></li>
-                        <li><Link to='/contact'>Contact</Link></li>
+                        <li>
+                            <Link to='/'><FontAwesomeIcon icon={faAngleRight} className='me-1' />Home</Link>
+                        </li>
+                        <li>
+                            <Link to='/about'><FontAwesomeIcon icon={faAngleRight} className='me-1' />About</Link>
+                        </li>
+                        <li>
+                            <Link to='/services'><FontAwesomeIcon icon={faAngleRight} className='me-1' />Services</Link>
+                        </li>
+                        <li>
+                            <Link to='/contact'><FontAwesomeIcon icon={faAngleRight} className='me-1' />Contact</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="col-12 col-lg-3 mb-3 mb-lg-0">
                     <h5 className="text-light m-0 mb-2 mb-lg-4 mt-2 fw-bold">Socials</h5>
                     <div className="socials">
-                        <a href={contactdata.facebook} target='blank'><FontAwesomeIcon icon={faFacebookF} className='pe-2 me-2 icon' /></a>
-                        <a href={contactdata.instagram} target='blank'><FontAwesomeIcon icon={faInstagram} className='px-2 me-2 icon' /></a>
-                        <a href={contactdata.tiktok} target='blank'><FontAwesomeIcon icon={faTiktok} className='px-2 me-2 icon' /></a>
-                        <a href={contactdata.whatsapp} target='blank'><FontAwesomeIcon icon={faWhatsapp} className='ps-2 me-2 icon' /></a>
+                        <a href={contactdata.facebook} target='blank' title='Facebook'><FontAwesomeIcon icon={faFacebookF} className='pe-2 me-2 icon' /></a>
+                        <a href={contactdata.instagram} target='blank' title='Instagram'><FontAwesomeIcon icon={faInstagram} className='px-2 me-2 icon' /></a>
+                        <a href={contactdata.tiktok} target='blank' title='Tiktok'><FontAwesomeIcon icon={faTiktok} className='px-2 me-2 icon' /></a>
+                        <a href={contactdata.whatsapp} target='blank' title='Whatsapp'><FontAwesomeIcon icon={faWhatsapp} className='ps-2 me-2 icon' /></a>
                     </div>
 
                     {/* <a href={contactdata.whatsapp} className='btn btn-primary border-2 btn-padding text-light mt-4' target='blank'>Get In Touch</a> */}

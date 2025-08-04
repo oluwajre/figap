@@ -77,11 +77,11 @@
         position: relative;
     
         @include media-breakpoint-down(md) {
-            max-height: 540px;
+            max-height: 600px;
         }
 
         @include media-breakpoint-down(sm) {
-            max-height: 520px;
+            max-height: 96vh;
         }
     
         img {

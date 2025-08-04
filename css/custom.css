@@ -11984,12 +11984,12 @@ textarea.form-control-lg {
 }
 @media (max-width: 767.98px) {
   .hero .banner-item {
-    max-height: 540px;
+    max-height: 600px;
   }
 }
 @media (max-width: 575.98px) {
   .hero .banner-item {
-    max-height: 520px;
+    max-height: 96vh;
   }
 }
 .hero .banner-item img {
@@ -12160,7 +12160,7 @@ textarea.form-control-lg {
 }
 
 .services-columns {
-  height: 400px;
+  height: 500px;
 }
 .services-columns img {
   width: 100%;
@@ -12168,18 +12168,21 @@ textarea.form-control-lg {
   object-fit: cover;
   transition: all 0.5s ease-out;
 }
-.services-columns .column-icon-box svg {
-  transform: translateY(0);
+.services-columns .column-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #fd7e14;
   transition: all 0.5s ease-out;
 }
-.services-columns .column-icon-box .shadow {
-  width: 70px;
-  height: 20px;
-  background-color: rgba(0, 0, 0, 0.35);
-  border-radius: 50%;
-  filter: blur(4px);
-  visibility: hidden;
-  transition: all 0.5s ease-out;
+.services-columns .column-icon-box svg {
+  width: 50px;
 }
 .services-columns .image-overlay {
   width: 100%;
@@ -12187,18 +12190,15 @@ textarea.form-control-lg {
   background-color: white;
   transition: all 0.5s ease-out;
 }
-.services-columns:hover .column-icon-box svg, .services-columns.active .column-icon-box svg {
-  transform: translateY(-15px);
+.services-columns:hover img {
+  transform: scale(1.1);
 }
-.services-columns:hover .column-icon-box .shadow, .services-columns.active .column-icon-box .shadow {
-  visibility: visible;
-}
-.services-columns:hover .image-overlay, .services-columns.active .image-overlay {
-  background-color: rgba(253, 126, 20, 0.85);
-}
-.services-columns:hover .naked-button-sm .icon, .services-columns.active .naked-button-sm .icon {
+.services-columns:hover .column-icon-box {
   color: #fff;
-  background-color: #000;
+  background-color: #fd7e14;
+}
+.services-columns:hover .image-overlay {
+  background-color: rgba(253, 126, 20, 0.85);
 }
 
 .service-details-section .service-highlight-column {
@@ -12270,7 +12270,8 @@ textarea.form-control-lg {
 }
 
 .testimonials {
-  margin-top: 7rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 .testimonials .slick-dot-border {
   display: flex;
@@ -12358,7 +12359,7 @@ textarea.form-control-lg {
   transition: all 0.3s ease-out;
 }
 .getin-touch-form a:hover {
-  color: #0c50b4;
+  color: #6f42c1;
 }
 .getin-touch-form input:focus, .getin-touch-form textarea:focus {
   box-shadow: none;
@@ -12380,7 +12381,15 @@ textarea.form-control-lg {
   padding-left: 0;
 }
 .footer .footer-link-group li {
-  line-height: 1.8;
+  line-height: 1.9;
+}
+.footer .footer-link-group li a {
+  display: inline-block;
+  transform: translateX(0);
+  transition: all 0.3s ease-out;
+}
+.footer .footer-link-group li a:hover {
+  transform: translateX(10px);
 }
 .footer .socials .icon {
   font-size: 1.3em;
@@ -12411,7 +12420,7 @@ textarea.form-control-lg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(253, 126, 20, 0.25);
+  background-color: rgba(52, 58, 64, 0.5);
 }
 .hero-banner .breadcrumb li {
   color: #fff;
@@ -12659,7 +12668,8 @@ p {
 }
 
 .button-primary,
-.button-primary-learn-more {
+.button-primary-learn-more,
+.button-primary-send {
   font-size: 1rem;
   color: #fff;
   background-color: #fd7e14;
@@ -12668,7 +12678,8 @@ p {
   transition: all 0.3s ease-out;
 }
 .button-primary .icon,
-.button-primary-learn-more .icon {
+.button-primary-learn-more .icon,
+.button-primary-send .icon {
   color: #fff;
   background-color: #000;
   border-radius: 50%;
@@ -12678,7 +12689,8 @@ p {
   transform: rotate(40deg);
 }
 .button-primary::before,
-.button-primary-learn-more::before {
+.button-primary-learn-more::before,
+.button-primary-send::before {
   position: absolute;
   padding-right: 3rem;
   width: 100%;
@@ -12693,11 +12705,13 @@ p {
   transition: all 0.3s ease-out;
 }
 .button-primary:hover::before,
-.button-primary-learn-more:hover::before {
+.button-primary-learn-more:hover::before,
+.button-primary-send:hover::before {
   right: 0;
 }
 .button-primary:hover .icon,
-.button-primary-learn-more:hover .icon {
+.button-primary-learn-more:hover .icon,
+.button-primary-send:hover .icon {
   color: #000;
   background-color: #fd7e14;
 }
@@ -12710,6 +12724,14 @@ p {
   content: "Learn More";
 }
 
+.button-primary-send::before {
+  content: "Send";
+}
+
+.naked-button-sm {
+  color: #fd7e14;
+  transition: all 0.3s ease-out;
+}
 .naked-button-sm .icon {
   color: #000;
   background-color: #fd7e14;
@@ -12718,7 +12740,14 @@ p {
   font-size: 0.9rem;
   font-weight: 800;
   transform: rotate(40deg);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
+}
+.naked-button-sm:hover {
+  color: #000;
+}
+.naked-button-sm:hover .icon {
+  color: #fff;
+  background-color: #000;
 }
 
 @-webkit-keyframes scale-down-center {

@@ -59,7 +59,7 @@
 
 
 .services-columns {
-    height: 400px;
+    height: 500px;
 
     img {
         width: 100%;
@@ -69,21 +69,31 @@
     }
 
     .column-icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+        background-color: $white;
+        color: $primary;
+        transition: all .5s ease-out;
 
         svg {
-            transform: translateY(0);
-            transition: all .5s ease-out;
+            width: 50px;
         }
 
-        .shadow {
-            width: 70px;
-            height: 20px;
-            background-color: rgba(0, 0, 0, 0.35);
-            border-radius: 50%;
-            filter: blur(4px);
-            visibility: hidden;
-            transition: all .5s ease-out;
-        }
+        // .shadow {
+        //     width: 70px;
+        //     height: 20px;
+        //     background-color: rgba(0, 0, 0, 0.35);
+        //     border-radius: 50%;
+        //     filter: blur(4px);
+        //     visibility: hidden;
+        //     transition: all .5s ease-out;
+        // }
         
     }
 
@@ -135,42 +145,20 @@
 
     
 
-    &:hover,
-    &.active {
-        .column-icon-box {
-            svg {
-                transform: translateY(-15px);
-            }
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
 
-            .shadow {
-                // display: inline-block;
-                visibility: visible;
-            }
-            
+        .column-icon-box {
+            color: $white;
+            background-color: $primary;
         }
 
         .image-overlay {
             background-color: rgba($primary, .85);
         }
 
-        .naked-button-sm {
-            .icon {
-                color: $white;
-                background-color: $black;
-            }
-        }
-
-        // .text-overlay-container {
-        //     transform: translateY(-40%);
-
-        //     .text-overlay {
-        //         background-color: $gray-900;
-    
-        //         .icon {
-        //             transform: rotate(90deg);
-        //         }
-        //     }
-        // }
     }
 
 

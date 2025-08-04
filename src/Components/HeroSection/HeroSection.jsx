@@ -62,7 +62,7 @@ const HeroSection = () => {
                 <a href={`mailto:${contactdata.email}`}>{contactdata.email}</a>
             </div>
             <div className="contact-box__socials">
-                <span className='fw-semibold me-2'>We are Social:</span>
+                <span className='d-none d-sm-inline-block fw-semibold me-2'>We are Social:</span>
                 <a href={contactdata.facebook} className='me-3'><FontAwesomeIcon icon={faFacebookF} className='icon' title='Facebook'/></a>
                 <a href={contactdata.instagram}><FontAwesomeIcon icon={faInstagram} className='icon me-3' title='Instagram'/></a>
                 <a href={contactdata.tiktok}><FontAwesomeIcon icon={faTiktok} className='icon' title='Tiktok'/></a>

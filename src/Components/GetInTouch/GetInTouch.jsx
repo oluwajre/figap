@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './GetInTouch.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpLong } from '@fortawesome/free-solid-svg-icons';
 
 const GetInTouch = ({ isFormComplete }) => {
     const [countdown, setCountdown] = useState(0);
@@ -82,7 +84,7 @@ const GetInTouch = ({ isFormComplete }) => {
                     type="text"
                     className="form-control border border-0 border-bottom"
                     id="floatingInputName"
-                    placeholder="Tani Abereoje"
+                    placeholder="Figap"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -156,20 +158,28 @@ const GetInTouch = ({ isFormComplete }) => {
                 )}
             </div>
 
-            <button
-                type="submit"
-                className="btn btn-outline-primary border border-primary border-2 py-3 px-2 mt-4 ms-2"
-                style={{ maxWidth: '180px' }}
-                disabled={isSubmitting}
-            >
-                {isSubmitting? (
-                    <>
+            {
+                isSubmitting ? (
+                    <button
+                        type="button"
+                        className="btn btn-outline-primary border border-primary border-2 py-3 px-2 mt-4 ms-2"
+                        style={{ maxWidth: '180px' }}
+                        disabled={isSubmitting}
+                    >
                         <span className="spinner-border spinner-border-sm me-1" aria-hidden="true"></span>
                         Please wait... ({countdown}s)
-                    </>): (
-                        <span>Send</span>
-                    )}
-            </button>
+                    </button>
+                ) : (
+                    <button
+                        type="submit"
+                        className="button-primary-send text-white btn border border-primary border-2 d-inline-flex align-items-center btn-padding fw-medium mt-4 ms-2"
+                        style={{ maxWidth: '140px' }}
+                    >
+                        <span className='ms-2'>Send</span>
+                        <FontAwesomeIcon icon={faArrowUpLong} className='icon ms-auto' />
+                    </button>
+                )
+            }
         </form>
     );
 };

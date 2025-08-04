@@ -25,7 +25,7 @@ const Navbar = ({ page }) => {
                     <div></div>
                 )}
                 
-                <button className="navbar-toggler border border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapse(!collapse)}}>
+                <button className="navbar-toggler border border-0 my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => {setCollapse(!collapse)}}>
                     {collapse? (
                         <span className="navbar-toggler-icon"></span>
                     ):(
@@ -65,7 +65,7 @@ const Navbar = ({ page }) => {
                     </ul>
 
                     <div className='d-flex flex-column flex-md-row justify-content-center align-items-center mt-3 mt-md-0'>
-                        <a href={contactdata.whatsapp} className='button-primary btn border border-primary border-2 d-inline-flex align-items-center btn-padding fw-medium' target='blank'>
+                        <a href={contactdata.whatsapp} className='button-primary text-white btn border border-primary border-2 d-inline-flex align-items-center btn-padding fw-medium' target='blank'>
                             Get In Touch
                             <FontAwesomeIcon icon={faArrowUpLong} className='icon ms-3' />
                         </a>
@@ -76,6 +76,7 @@ const Navbar = ({ page }) => {
                         <div className='d-inline-flex flex-column text-center d-md-none mt-5' style={{maxWidth: '300px'}}>
                             {/* <p><a>{contactdata.address}</a></p> */}
                             <p><a href={`tel:${contactdata.phone_1}`}>{contactdata.phone_1}</a></p>
+                            {/* <p><a href={`tel:${contactdata.phone_2}`}>{contactdata.phone_2}</a></p> */}
                             <p><a href={`mailto:${contactdata.email}`}>{contactdata.email}</a></p>
                         </div>
                     </div>

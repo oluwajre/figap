@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 // import { Link } from 'react-router-dom';
 import './ServicesSection.css';
 // import { logo } from '../../assets/images';
@@ -7,26 +7,6 @@ import { servicecolumndata } from '../../Constants';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
 const ServicesSection = () => {
-  useEffect(() => {
-    const columns = document.querySelectorAll('.services-columns');
-
-    if (columns.length > 0) {
-      columns[0].classList.add('active');
-    }
-
-    columns.forEach(column => {
-      column.addEventListener('mouseenter', () => {
-        columns.forEach(c => c.classList.remove('active'));
-        column.classList.add('active');
-      });
-    });
-
-    return () => {
-      columns.forEach(column => {
-        column.removeEventListener('mouseenter', () => {});
-      });
-    };
-  }, []);
 
   return (
     <section className="services" id="services">
